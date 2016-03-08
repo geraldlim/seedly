@@ -1,7 +1,7 @@
 /* ==========================================================================
    Global styles
    ========================================================================== */
-   h1, h2, h3, h4, h5, h6, p, .btn, .navbar-nav a, .form-control, .list-inline, small, #pricing {
+   h1, h2, h3, h4, h5, h6, p, .btn, .navbar-nav a, .form-control, .list-inline, small, .dropzone .dz-message  {
     font-family: 'Montserrat', sans-serif;
   }
 
@@ -20,7 +20,7 @@
 h2 {
   font-size: 40px;
   line-height: 40px;
-  etter-spacing: -0.5px;
+  letter-spacing: -0.5px;
   color: #ffffff;
   font-weight: 700;
 }
@@ -117,12 +117,14 @@ a:hover, a:focus {
 }
 
 .btn-primary {
-  background-color:#70cbce;
+  /*background-color:#70cbce;*/
+  background-color: #55CCFC;
   color: #ffffff;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active {
-  background-color: #8be2e5;
+  /*background-color: #8be2e5;*/
+  background-color: #87DBFD;
   color: #ffffff;
   -webkit-transition: all 0.35s ease-in-out;
   -moz-transition: all 0.35s ease-in-out;
@@ -185,7 +187,6 @@ a:hover, a:focus {
   margin-bottom: 100px !important;
 }
 
-
 /*-----------------Colors------------------*/
 
 .black {
@@ -224,7 +225,10 @@ a:hover, a:focus {
 
    .navbar {
     border: 0px solid rgba(0, 0, 0, 0);
-    background: #70cbce;
+    /*background: #70cbce;
+    background-color: #55CCFC;
+    border-bottom: 1px solid #fff;
+    */
     margin: auto;
     min-height: 60px;
     padding-top: 8px;
@@ -296,7 +300,7 @@ a:hover, a:focus {
     left: 0;
     right: 0;
     margin-left: 0px;
-    margin-bottom: 12%;
+    margin-bottom: 14%;
   }
 
   .signin {
@@ -366,7 +370,7 @@ a:hover, a:focus {
 
 
  #feature {
-  background: url(../img/feature.jpg) #231f20 no-repeat center center fixed;
+  background: url(../img/feature2.jpg) #231f20 no-repeat center center fixed;
   min-height: 300px;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -396,7 +400,7 @@ hr.line {
 
 .report {
   position: relative;
-  height: 380px;
+  height: 480px;
 }
 
 .report img {
@@ -417,18 +421,43 @@ hr.line {
 
 }
 
-#invite, #security {
+#invite, #security, .modal-body, .modal-header, .modal-footer {
   background: #f2f2f2;
 }
 
+.modal-content{
+ -webkit-border-radius: 10px;
+ border-radius: 10px;
+}
+
+.modal-header{
+  -webkit-border-top-left-radius: 10px;
+  -webkit-border-top-right-radius: 10px;
+  -moz-border-radius-topleft: 10px;
+  -moz-border-radius-topright: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.modal-footer{
+  -webkit-border-bottom-left-radius: 10px;
+  -webkit-border-bottom-right-radius: 10px;
+  -moz-border-radius-bottomleft: 10px;
+  -moz-border-radius-bottomright: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
 .fa-envelope-o {
-  color: #4ec3cd;
+  /*color: #4ec3cd;*/
+  color: #55CCFC;
   font-size: 22px;
   display: block;
   padding-top: 15px;
   width: 60px;
   height: 60px;
-  border: 2px solid #4ec3cd;
+  /*border: 2px solid #4ec3cd;*/
+  border: 2px solid #55CCFC;
   -moz-border-radius: 30px;
   -o-border-radius: 30px;
   -webkit-border-radius: 30px;
@@ -436,17 +465,23 @@ hr.line {
   margin: auto;
 }
 
+.report-lists li{
+  display:table;
+  margin: 0 auto;
+}
+
 footer {
   background: #ffffff;
-  padding: 40px 0px;
+  padding: 8px 0px;
+  padding-top: 16px;
 }
 
 .social li a:hover {
   opacity: 0.5;
 }
 
-#how {
-  background: #70cbce;
+#how, #where {
+  background: #55ccfc;
 }
 
 #faq{
@@ -457,11 +492,11 @@ footer {
   background-color: #fff !important;
   border-color: #fff !important;
   cursor: pointer;
-  color: #4fd2c2 !important;
+  color: #55ccfc !important;
 }
 
 .panel-title a, .panel-title a:hover, .panel-title a:active, .panel-title a:visited{
- color: #4fd2c2 !important;
+ color: #55ccfc !important;
  font-size:20px;
 }
 
@@ -474,6 +509,25 @@ footer {
   border-top: none !important;
 }
 
+.modal-header {
+  border-bottom: 0;
+}
+
+.modal-footer{
+  border-top: 0;
+}
+
+.dropzone .dz-message {
+  color: #929496;
+  font-size: 15px;
+  margin: 2.5em 0 !important;
+}
+
+.dropzone {
+ border: 2px dotted #55CCFC !important;
+ border-radius: 4px;
+ box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset !important;
+}
 
 
 
@@ -530,6 +584,13 @@ footer {
     }
 
 
+  .headerlogo{
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+
+
     .btn-wide {
       width: 100%;
       font-size: 12.5px;
@@ -542,41 +603,88 @@ footer {
       background-attachment: scroll;
     }
 
-  }
-
-
-  /* Landscape phone to portrait tablet */
-  @media (min-width: 481px) and (max-width: 767px) { 
-
-    #feature { 
-      background-attachment: scroll;
+    .logo{
+      margin-left:8px;
     }
 
-  }
-
-
-  /* Portrait tablet to landscape and desktop */
-  @media (min-width: 768px) and (max-width: 991px) {
-
-    #feature { 
-      background-attachment: scroll;
+    .header-info {
+      margin-bottom: 50%;
     }
 
+
+    .pad-xl, .pad-lg, .pad-md, .pad-sm{
+      padding: 15px 0px;
+    }
+
+    .row{
+      padding: 0px 6px;
+    }
+
+    #where{
+     padding: 300px 0 15px 0; 
+   }
+
+ }
+
+ @media (min-width: 420px) and (max-width: 480px) { 
+   #where{
+     padding: 380px 0 15px 0; 
+   }
+ }
+
+
+ /* Landscape phone to portrait tablet */
+ @media (min-width: 481px) and (max-width: 767px) { 
+
+  #feature { 
+    background-attachment: scroll;
   }
 
-
-
-  /* Desktops and laptops ----------- */
-  @media (min-width: 992px) and (max-width: 1199px) {
-
+  .pad-xl, .pad-lg, .pad-md, .pad-sm{
+    padding: 15px 0px;
   }
 
+  .row{
+    padding: 0px 30px;
+  }
+
+  #where{
+   padding: 460px 0 15px 0; 
+ }
+
+ .logo{
+  margin-left:8px;
+}
+
+}
 
 
-  /* Large screens ----------- */
-  @media (min-width: 1200px) and (max-width: 3000px) {
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 991px) {
 
-  }   
+  #feature { 
+    background-attachment: scroll;
+  }
+
+  #where{
+   padding-top: 400px; 
+ }
+
+}
+
+
+
+/* Desktops and laptops ----------- */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+
+
+/* Large screens ----------- */
+@media (min-width: 1200px) and (max-width: 3000px) {
+
+}   
 
 
 
